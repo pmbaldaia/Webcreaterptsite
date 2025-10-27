@@ -14,13 +14,6 @@
           <p class="paragraph mt-4" v-for="intro in ABOUT.introduce">
             {{ intro }}
           </p>
-
-          <Button
-            class="mt-8"
-            label="Connect Me"
-            to="#contact"
-            variant="btn-dark"
-          />
         </div>
 
         <div
