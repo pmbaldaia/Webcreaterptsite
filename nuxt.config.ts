@@ -4,6 +4,12 @@ export default defineNuxtConfig({
   app: {
     head: {
       title: "Webcreaterpt | Shopify Partner",
+      meta: [
+        {
+          name: "google-site-verification",
+          content: "3O2YIPvOwdjbvZ--rL92eCjFs8y6GsPtUpcrmEsrI80",
+        },
+      ],
     },
   },
   modules: [
