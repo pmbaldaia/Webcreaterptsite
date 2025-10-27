@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     display: "swap",
   },
   sitemap: {
+    hostname: "https://www.webcreaterpt.pt",
     gzip: true,
     routes: [
       "/",
