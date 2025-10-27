@@ -3,6 +3,7 @@ export const NAVLINKS = [
   { label: "Sobre", url: "#about" },
   { label: "Portefólio", url: "#work" },
   { label: "Serviços", url: "#service" },
+  { label: "Pedir orçamento", url: "#contactus" },
 ];
 
 export const PROFILE = {

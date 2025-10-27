@@ -1,7 +1,28 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+
+const headerOffset = 100;
+
+function navigate(link: string) {
+  const element = document.querySelector(link);
+  if (element) {
+    const elementPosition =
+      element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  }
+}
+</script>
 
 <template>
-  <div id="hero" class="container relative pt-20 lg:pt-40">
+  <div
+    id="hero"
+    class="container relative pt-20 sm:pt-32 lg:pt-40 pb-12 sm:pb-16"
+  >
     <div class="z-10 relative flex flex-col items-center">
       <div class="badge flex items-center gap-2">
         <div class="animate-pulse w-2 h-2 rounded-full bg-green-500"></div>
@@ -19,8 +40,12 @@
       </p>
 
       <div class="flex gap-4 items-center mt-8 flex-wrap justify-center">
-        <Button label="Ver Trabalhos" to="#work" />
-        <Button label="Contacte-me" to="#contact" variant="btn-dark" />
+        <button
+          @click="navigate('#work')"
+          class="bg-blue-500 text-white font-medium px-6 py-3 rounded-lg hover:bg-blue-400 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        >
+          Ver Trabalhos
+        </button>
       </div>
     </div>
 
@@ -46,7 +71,6 @@
             :alt="item.name"
           />
         </li>
-
         <li
           v-for="item in WORK.works"
           :key="item.name + '-scroll2'"

@@ -1,26 +1,32 @@
 <template>
   <LayoutScrollSmooth>
-    <section id="work" class="container">
+    <section
+      id="work"
+      class="container py-12 sm:py-16"
+      aria-labelledby="work-heading"
+    >
       <p class="badge">{{ WORK.label }}</p>
-      <h2 class="section-title">{{ WORK.headline }}</h2>
+      <h2 id="work-heading" class="section-title">{{ WORK.headline }}</h2>
       <p class="paragraph mt-4 max-w-xl">{{ WORK.subline }}</p>
 
-      <div class="grid md:grid-cols-2 gap-6 mt-16">
-        <div
+      <div class="grid md:grid-cols-2 gap-6 mt-12 sm:mt-16">
+        <article
           v-for="item in WORK.works"
           :key="item.name"
           class="p-3 border bg-[#0b061a]/40 backdrop-blur-sm border-white/10 rounded-2xl relative flex items-center group"
+          tabindex="0"
         >
           <div class="overflow-hidden aspect-[4/3] rounded-lg">
             <img
-              class="group-hover:scale-105 transition-all duration-500 w-full h-full object-cover"
+              class="group-hover:scale-105 transition-transform duration-500 w-full h-full object-cover"
               :src="'/images/work/' + item.thumbnails"
-              :alt="'Thumbnail ' + item.name"
+              :alt="'Imagem do projeto ' + item.name"
             />
           </div>
 
           <div
             class="absolute bottom-6 scale-90 opacity-0 group-hover:scale-100 group-hover:opacity-100 inset-x-6 bg-gradient-to-t from-black/90 to-black/30 backdrop-blur-sm transition-all duration-500 rounded-xl overflow-hidden p-4"
+            aria-hidden="false"
           >
             <div>
               <div class="flex items-center justify-between">
@@ -30,7 +36,7 @@
                   >
                     {{ item.name }}
                   </h3>
-                  <p class="font-medium uppercase tracking-wide text-gray-600">
+                  <p class="font-medium uppercase tracking-wide text-gray-400">
                     {{ item.type }}
                   </p>
                 </div>
@@ -38,6 +44,8 @@
                   :href="item.live_demo"
                   target="_blank"
                   rel="noopener noreferrer"
+                  aria-label="Ver projeto {{ item.name }} ao vivo"
+                  class="focus:outline-none focus:ring-2 focus:ring-blue-500 rounded"
                 >
                   <VsxIcon
                     class="text-gray-400"
@@ -58,8 +66,9 @@
 
           <div
             class="absolute bottom-0 w-60 h-[1px] z-10 bg-gradient-to-r from-[#0b50e5]/0 via-[#0b50e5] to-[#0b50e5]/0"
+            aria-hidden="true"
           ></div>
-        </div>
+        </article>
       </div>
     </section>
   </LayoutScrollSmooth>

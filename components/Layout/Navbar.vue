@@ -30,7 +30,6 @@ function navigate(link: string) {
   }
 }
 </script>
-
 <template>
   <header
     class="max-w-[1480px] px-4 mx-auto fixed inset-x-0 top-0 mt-4 lg:mt-10 z-50"
@@ -55,7 +54,7 @@ function navigate(link: string) {
         <NuxtLink
           v-for="link in NAVLINKS"
           :key="link.label"
-          class="text-white relative group text-xl lg:text-base"
+          class="text-white relative group text-xl lg:text-base cursor-pointer"
           @click.prevent="navigate(link.url)"
         >
           <span class="relative z-10">{{ link.label }}</span>
@@ -71,14 +70,14 @@ function navigate(link: string) {
           <a
             href="https://facebook.com/webcreaterpt"
             target="_blank"
-            class="text-white"
+            class="text-white cursor-pointer"
           >
             <img src="/svg/facebook.svg" alt="Facebook" class="h-6 w-6" />
           </a>
           <a
             href="https://instagram.com/webcreaterpt"
             target="_blank"
-            class="text-white"
+            class="text-white cursor-pointer"
           >
             <img src="/svg/instagram.svg" alt="Instagram" class="h-6 w-6" />
           </a>
@@ -87,15 +86,23 @@ function navigate(link: string) {
 
       <div class="flex items-center gap-4">
         <div class="hidden lg:flex gap-4">
-          <a href="https://facebook.com/webcreaterpt" target="_blank">
+          <a
+            href="https://facebook.com/webcreaterpt"
+            target="_blank"
+            class="cursor-pointer"
+          >
             <img src="/svg/facebook.svg" alt="Facebook" class="h-6 w-6" />
           </a>
-          <a href="https://instagram.com/webcreaterpt" target="_blank">
+          <a
+            href="https://instagram.com/webcreaterpt"
+            target="_blank"
+            class="cursor-pointer"
+          >
             <img src="/svg/instagram.svg" alt="Instagram" class="h-6 w-6" />
           </a>
         </div>
 
-        <button @click="toggleMenu" class="lg:hidden px-4 py-2">
+        <button @click="toggleMenu" class="lg:hidden px-4 py-2 cursor-pointer">
           <img
             class="transition-transform duration-300"
             :src="isActive ? '/svg/ic-close.svg' : '/svg/ic-hamburger.svg'"

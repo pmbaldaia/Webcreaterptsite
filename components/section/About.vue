@@ -2,7 +2,7 @@
 
 <template>
   <LayoutScrollSmooth>
-    <section id="about" class="container">
+    <section id="about" class="container py-12 sm:py-16">
       <div class="grid items-center grid-cols-1 lg:grid-cols-2 gap-8">
         <!-- Content -->
         <div>
