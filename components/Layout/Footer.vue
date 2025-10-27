@@ -7,7 +7,9 @@ const currentYear = new Date().getFullYear();
 <template>
   <footer class="bg-[#0b061a] text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-6 md:gap-10 px-2 sm:px-0">
+      <div
+        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-10 px-2 sm:px-0"
+      >
         <!-- Perfil -->
         <div class="flex flex-col">
           <h3 class="text-white font-semibold mb-2">Perfil</h3>
@@ -22,26 +24,30 @@ const currentYear = new Date().getFullYear();
         </div>
 
         <!-- Contacto -->
-        <div class="flex flex-col">
+        <div class="flex flex-col mt-6 sm:mt-0">
           <h3 class="text-white font-semibold mb-2">Contacto</h3>
           <div class="text-sm text-white/60 space-y-1">
             <p>
               Telefone:
-              <a :href="`tel:${PROFILE.phone}`" class="hover:text-white">{{
-                PROFILE.phone
-              }}</a>
+              <a
+                :href="`tel:${PROFILE.phone}`"
+                class="hover:text-white transition-colors duration-300"
+                >{{ PROFILE.phone }}</a
+              >
             </p>
             <p>
               Email:
-              <a :href="`mailto:${PROFILE.email}`" class="hover:text-white">{{
-                PROFILE.email
-              }}</a>
+              <a
+                :href="`mailto:${PROFILE.email}`"
+                class="hover:text-white transition-colors duration-300"
+                >{{ PROFILE.email }}</a
+              >
             </p>
           </div>
         </div>
 
         <!-- Redes Sociais -->
-        <div class="flex flex-col">
+        <div class="flex flex-col mt-6 md:mt-0">
           <h3 class="text-white font-semibold mb-2">Redes Sociais</h3>
           <div class="flex gap-4 mb-4">
             <a
@@ -61,20 +67,47 @@ const currentYear = new Date().getFullYear();
           </div>
         </div>
 
-        <div class="flex flex-col items-start md:items-center lg:items-start">
+        <!-- Shopify Partner -->
+        <div
+          class="flex flex-col mt-6 md:mt-0 items-start md:items-center lg:items-start"
+        >
           <h3 class="text-white font-semibold mb-2">Shopify Partner</h3>
-          <img
-            src="/images/shopify-partner_copy.webp"
-            alt="Shopify Partner"
-            class="h-12 w-auto bg-white p-2 rounded"
-          />
+          <div class="bg-white p-2 rounded">
+            <img
+              src="/images/shopify-partner_copy.webp"
+              alt="Shopify Partner"
+              class="h-12 w-auto"
+            />
+          </div>
         </div>
       </div>
 
+      <!-- Links legais -->
       <div
-        class="mt-8 sm:mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/30 px-2 sm:px-0"
+        class="mt-8 sm:mt-12 border-t border-white/10 pt-6 text-center text-sm text-white/30 px-2 sm:px-0 flex flex-wrap justify-center items-center gap-2"
       >
-        &copy; {{ currentYear }} Todos os direitos reservados
+        <span>&copy; {{ currentYear }} Todos os direitos reservados</span>
+        <span>|</span>
+        <NuxtLink
+          to="/policy/privacy"
+          class="hover:text-white transition-colors duration-300"
+        >
+          Política de Privacidade
+        </NuxtLink>
+        <span>|</span>
+        <NuxtLink
+          to="/policy/terms"
+          class="hover:text-white transition-colors duration-300"
+        >
+          Termos de Uso
+        </NuxtLink>
+        <span>|</span>
+        <NuxtLink
+          to="/policy/resolution"
+          class="hover:text-white transition-colors duration-300"
+        >
+          Resolução de Litígios
+        </NuxtLink>
       </div>
     </div>
 

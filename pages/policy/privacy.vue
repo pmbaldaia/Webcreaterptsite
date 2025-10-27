@@ -1,8 +1,10 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-[200px] pb-16">
-    <h1 class="text-4xl font-bold text-white mb-8">Política de Privacidade</h1>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-[200px] pb-16">
+    <h1 class="text-4xl font-bold text-white mb-8 text-center sm:text-left">
+      Política de Privacidade
+    </h1>
 
     <div class="space-y-6 text-white/80 leading-relaxed">
       <p>
@@ -57,5 +59,5 @@
 
       <p class="mt-4">Última atualização: 27 de Outubro de 2025</p>
     </div>
-</div>
+  </div>
 </template>

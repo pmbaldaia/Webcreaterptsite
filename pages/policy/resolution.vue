@@ -62,7 +62,7 @@ const toggle = (index: number) => {
 
 <template>
   <div
-    class="min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 lg:px-8 pt-[200px] pb-16 bg-[#0a0a17]"
+    class="min-h-screen flex flex-col items-center justify-start px-4 sm:px-6 lg:px-8 pt-24 sm:pt-[200px] pb-16 bg-[#0a0a17]"
   >
     <h1 class="text-3xl sm:text-4xl font-bold text-white mb-6 text-center">
       Resolução de Litígios

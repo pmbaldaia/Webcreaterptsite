@@ -14,7 +14,6 @@ function toggleMenu() {
 
 async function navigate(link: string) {
   isActive.value = false;
-
   const hash = link.startsWith("#")
     ? link
     : link.includes("#")
@@ -22,10 +21,8 @@ async function navigate(link: string) {
     : "";
   activeLink.value = hash;
 
-  // Se já não estivermos na página inicial, redireciona para "/"
   if (route.path !== "/") {
     await router.push("/");
-    // Espera o DOM renderizar
     await new Promise((resolve) => setTimeout(resolve, 50));
   }
 
@@ -53,7 +50,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="max-w-[1480px] px-4 mx-auto fixed inset-x-0 top-0 mt-4 lg:mt-10 z-50"
+    class="max-w-[1480px] px-4 mx-auto fixed inset-x-0 top-0 mt-2 sm:mt-4 lg:mt-10 z-50"
   >
     <div class="flex items-center justify-between">
       <NuxtLink to="/">
@@ -66,7 +63,7 @@ onMounted(() => {
 
       <nav
         :class="[
-          'absolute top-16 inset-x-4 lg:inset-0 lg:relative flex flex-col lg:flex-row gap-8 items-center px-7 py-8 lg:py-0 transition-all duration-300',
+          'absolute top-12 sm:top-16 inset-x-4 lg:inset-0 lg:relative flex flex-col lg:flex-row gap-8 items-center px-7 py-6 lg:py-0 transition-all duration-300',
           isActive
             ? 'block bg-black/80 backdrop-blur-md rounded-lg'
             : 'hidden lg:flex',
@@ -87,7 +84,7 @@ onMounted(() => {
           ></span>
         </NuxtLink>
 
-        <div v-if="isActive" class="mt-6 flex gap-4 justify-center lg:hidden">
+        <div v-if="isActive" class="mt-4 flex gap-4 justify-center lg:hidden">
           <a
             href="https://facebook.com/webcreaterpt"
             target="_blank"
@@ -132,5 +129,7 @@ onMounted(() => {
         </button>
       </div>
     </div>
+
+    <LayoutLine />
   </header>
 </template>
