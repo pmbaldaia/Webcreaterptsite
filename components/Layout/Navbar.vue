@@ -129,7 +129,5 @@ onMounted(() => {
         </button>
       </div>
     </div>
-
-    <LayoutLine />
   </header>
 </template>
