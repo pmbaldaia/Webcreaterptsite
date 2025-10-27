@@ -1,6 +1,10 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
+import { useRouter, useRoute } from "vue-router";
+import { NAVLINKS } from "~/utils/content";
 
+const router = useRouter();
+const route = useRoute();
 const isActive = ref(false);
 const activeLink = ref("#hero");
 
@@ -8,28 +12,45 @@ function toggleMenu() {
   isActive.value = !isActive.value;
 }
 
-function navigate(link: string) {
-  activeLink.value = link;
+async function navigate(link: string) {
   isActive.value = false;
 
-  const element = document.querySelector(link);
-  const headerOffset = 100;
-  if (element) {
-    const elementPosition =
-      element.getBoundingClientRect().top + window.pageYOffset;
-    const offsetPosition = elementPosition - headerOffset;
+  const hash = link.startsWith("#")
+    ? link
+    : link.includes("#")
+    ? "#" + link.split("#")[1]
+    : "";
+  activeLink.value = hash;
 
-    window.scrollTo({
-      top: offsetPosition,
-      behavior: "smooth",
-    });
+  // Se já não estivermos na página inicial, redireciona para "/"
+  if (route.path !== "/") {
+    await router.push("/");
+    // Espera o DOM renderizar
+    await new Promise((resolve) => setTimeout(resolve, 50));
+  }
+
+  if (hash) {
+    const element = document.querySelector(hash);
+    const headerOffset = 100;
+    if (element) {
+      const elementPosition =
+        element.getBoundingClientRect().top + window.pageYOffset;
+      const offsetPosition = elementPosition - headerOffset;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+    }
   }
 
   if (link.startsWith("http")) {
     window.open(link, "_blank");
   }
 }
+
+onMounted(() => {
+  const currentHash = window.location.hash;
+  if (currentHash) activeLink.value = currentHash;
+});
 </script>
+
 <template>
   <header
     class="max-w-[1480px] px-4 mx-auto fixed inset-x-0 top-0 mt-4 lg:mt-10 z-50"
@@ -54,15 +75,15 @@ function navigate(link: string) {
         <NuxtLink
           v-for="link in NAVLINKS"
           :key="link.label"
-          class="text-white relative group text-xl lg:text-base cursor-pointer"
+          class="text-white relative text-xl lg:text-base cursor-pointer"
           @click.prevent="navigate(link.url)"
         >
           <span class="relative z-10">{{ link.label }}</span>
           <span
-            :class="[
-              'absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300',
-              activeLink === link.url ? 'w-full' : 'w-0 group-hover:w-full',
-            ]"
+            class="absolute left-0 -bottom-1 h-[2px] bg-white transition-all duration-300"
+            :class="
+              activeLink === '#' + link.url.split('#')[1] ? 'w-full' : 'w-0'
+            "
           ></span>
         </NuxtLink>
 

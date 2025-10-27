@@ -16,42 +16,46 @@ export const PROFILE = {
   avatar: "/images/profile.jpeg",
   phone: "+351 915 970 882",
   email: "webcreaterpt@gmail.com",
-  description: `Na WebCreaterPT, somos uma agência dedicada a criar soluções digitais inovadoras e funcionais. Focamo-nos na experiência do utilizador e na entrega de resultados de excelência, combinando criatividade, design e tecnologia para potenciar negócios e experiências digitais de impacto.`,
+  description:
+    "Na WebCreaterPT, somos especialistas em soluções digitais Shopify de alta performance, focados em design, UX e resultados para negócios online.",
 };
 
 export const HERO = {
   badge: "PARCEIRO SHOPIFY",
-  headline: `Criamos Experiências Digitais Inovadoras que Fazem a Diferença`,
+  headline: "Criamos Experiências Digitais Inovadoras que Fazem a Diferença",
   subline:
-    "Transformamos ideias em experiências digitais únicas, com websites e interfaces modernas, responsivas e visualmente impactantes. Criamos soluções que encantam utilizadores e impulsionam negócios.",
+    "Transformamos ideias em experiências digitais únicas com lojas Shopify responsivas, personalizadas e escaláveis.",
 };
 
 export const SERVICE = {
   label: "Serviços",
-  headline: "Soluções digitais personalizadas para cada projeto",
+  headline: "Soluções Shopify profissionais para o seu negócio",
   subline:
-    "Na WebCreaterPT, combinamos design e tecnologia para criar experiências digitais centradas no utilizador. Vamos construir juntos soluções inovadoras e memoráveis.",
+    "Como Parceiro Shopify certificado, oferecemos serviços especializados para criar lojas online de alta performance, totalmente personalizadas e escaláveis.",
   services: [
     {
-      name: "Desenvolvimento Web",
-      icon: "Scroll",
+      name: "Desenvolvimento de Lojas Shopify",
+      icon: "ShoppingCart",
       description:
-        "Websites modernos, responsivos e com performance otimizada, focados na experiência do utilizador e nos objetivos do negócio.",
-      thumbnails: "",
+        "Criação de lojas Shopify totalmente personalizadas, responsivas e otimizadas para conversão, alinhadas com a identidade da sua marca.",
     },
     {
-      name: "Desenvolvimento Mobile",
-      icon: "MobileProgramming",
+      name: "Integrações e Automação",
+      icon: "Settings",
       description:
-        "Aplicações móveis intuitivas, eficientes e responsivas, pensadas para envolver utilizadores e impulsionar resultados.",
-      thumbnails: "",
+        "Integração de sistemas de pagamento, ERP, CRM e ferramentas de marketing para automatizar processos e melhorar a experiência do cliente.",
     },
     {
-      name: "Design UI/UX",
-      icon: "PenTool2",
+      name: "Otimização de Performance e UX",
+      icon: "Speedometer",
       description:
-        "Criação de interfaces elegantes e experiências digitais centradas no utilizador, alinhadas com a identidade e objetivos da sua marca.",
-      thumbnails: "",
+        "Análise e melhoria da experiência do utilizador, velocidade de carregamento e design responsivo para maximizar vendas e retenção de clientes.",
+    },
+    {
+      name: "Suporte e Consultoria Shopify",
+      icon: "Speedometer",
+      description:
+        "Assistência técnica, suporte contínuo e consultoria estratégica para garantir o sucesso da sua loja Shopify.",
     },
   ],
 };
@@ -66,7 +70,7 @@ export const WORK = {
       name: "Jafversatil",
       live_demo: "https://jafversatil.pt",
       description:
-        "Website responsivo com design moderno e funcionalidades avançadas, pensado para uma experiência envolvente.",
+        "Website responsivo com design moderno e funcionalidades avançadas.",
       thumbnails: "jafversatil.webp",
       type: "Web Design",
     },
@@ -98,7 +102,7 @@ export const WORK = {
       name: "VanessaKloset",
       live_demo: "https://vanessakloset.pt",
       description:
-        "Plataforma de e-commerce moderna e elegante para o setor da moda, centrada no utilizador.",
+        "Plataforma de e-commerce moderna e elegante para o setor da moda.",
       thumbnails: "vanessakloset.webp",
       type: "E-commerce",
     },
@@ -106,7 +110,7 @@ export const WORK = {
       name: "MimuKidsStore",
       live_demo: "https://mimukidsstore.pt",
       description:
-        "Loja online para produtos infantis, com interface clara, responsiva e fácil de navegar.",
+        "Loja online para produtos infantis, com interface clara e responsiva.",
       thumbnails: "mimukidsstore.webp",
       type: "E-commerce",
     },
