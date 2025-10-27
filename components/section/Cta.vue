@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear();
   <footer class="bg-[#0b061a] text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
-        <div class="space-y-4">
+        <div class="flex flex-col space-y-4">
           <NuxtLink to="/" class="flex items-center gap-2">
             <img
               src="/images/profile.jpeg"
@@ -15,10 +15,12 @@ const currentYear = new Date().getFullYear();
             />
             <span class="font-bold text-lg">{{ PROFILE.fullname }}</span>
           </NuxtLink>
-          <p class="text-sm text-white/60">{{ PROFILE.description }}</p>
+          <p class="text-sm text-white/60 leading-relaxed">
+            {{ PROFILE.description }}
+          </p>
         </div>
 
-        <div>
+        <div class="flex flex-col">
           <h3 class="text-white font-semibold mb-4">Navegação</h3>
           <ul class="space-y-2">
             <li v-for="link in NAVLINKS" :key="link.label">
@@ -32,7 +34,7 @@ const currentYear = new Date().getFullYear();
           </ul>
         </div>
 
-        <div>
+        <div class="flex flex-col">
           <h3 class="text-white font-semibold mb-4">Contacto</h3>
           <p class="text-sm text-white/60">
             Telefone:
@@ -48,9 +50,9 @@ const currentYear = new Date().getFullYear();
           </p>
         </div>
 
-        <div>
+        <div class="flex flex-col">
           <h3 class="text-white font-semibold mb-4">Redes Sociais</h3>
-          <div class="flex gap-4">
+          <div class="flex gap-4 mt-2">
             <a
               href="https://facebook.com/webcreaterpt"
               target="_blank"
@@ -76,7 +78,7 @@ const currentYear = new Date().getFullYear();
         <NuxtLink
           to="https://webcreaterpt.com"
           target="_blank"
-          class="hover:text-white"
+          class="hover:text-white font-medium"
         >
           WebcreaterPT </NuxtLink
         >. Todos os direitos reservados.
