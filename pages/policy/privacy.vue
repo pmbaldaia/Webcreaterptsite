@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-[100px] pb-16">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-[200px] pb-16">
     <h1 class="text-4xl font-bold text-white mb-8">Política de Privacidade</h1>
 
     <div class="space-y-6 text-white/80 leading-relaxed">

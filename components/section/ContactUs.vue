@@ -100,7 +100,7 @@ function sendEmail() {
         />
         <label for="terms" class="text-white/80 text-sm">
           Aceito os
-          <NuxtLink to="/privacy" class="underline hover:text-white"
+          <NuxtLink to="/policy/privacy" class="underline hover:text-white"
             >Termos de Privacidade</NuxtLink
           >
           <span class="text-red-500">*</span>
