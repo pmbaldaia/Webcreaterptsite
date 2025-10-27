@@ -114,6 +114,14 @@ export const WORK = {
       thumbnails: "mimukidsstore.webp",
       type: "E-commerce",
     },
+    {
+      name: "GDCSS Castelões",
+      live_demo: "https://gdcsscasteloes.pt",
+      description:
+        "Website institucional desenvolvido para o GDCSS Castelões, com foco na apresentação do clube, equipas, calendário e notícias.",
+      thumbnails: "gdcsscasteloes.webp",
+      type: "Website Institucional",
+    },
   ],
 };
 
