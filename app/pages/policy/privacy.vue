@@ -1,0 +1,73 @@
+<script setup lang="ts">
+import { PROFILE } from '~/utils/content'
+useSeoMeta({ title: 'Política de Privacidade | WebCreaterPT' })
+</script>
+
+<template>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 pt-24 sm:pt-[200px] pb-16">
+    <h1 class="text-4xl font-bold text-white mb-8 text-center sm:text-left">
+      Política de Privacidade
+    </h1>
+
+    <div class="space-y-6 text-white/80 leading-relaxed">
+      <p>
+        A sua privacidade é importante para nós. Esta política explica como
+        recolhemos, utilizamos e protegemos os seus dados pessoais ao visitar o
+        nosso site.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-4">1. Informações que recolhemos</h2>
+      <p>
+        Podemos recolher informações como nome, email, telemóvel e mensagens
+        enviadas através do nosso formulário de contacto. Estes dados são
+        fornecidos voluntariamente pelo utilizador.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-4">2. Uso das informações</h2>
+      <p>
+        Os dados recolhidos são utilizados exclusivamente para responder às suas
+        mensagens, melhorar a nossa comunicação e prestar os nossos serviços.
+        Não partilhamos os seus dados com terceiros para fins de marketing.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-4">
+        3. Cookies e tecnologias semelhantes
+      </h2>
+      <p>
+        O nosso site pode utilizar cookies para melhorar a experiência do
+        utilizador, manter sessões ativas e analisar tráfego. Pode configurar o
+        seu navegador para recusar cookies.
+      </p>
+
+      <p>
+        Ao escolher contactar-nos através do WhatsApp, é aberta uma conversa nessa
+        plataforma e o envio dos dados depende da sua confirmação. O tratamento
+        da mensagem nessa plataforma está sujeito também à política de privacidade
+        do WhatsApp. A alternativa por email continua disponível.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-4">4. Direitos do utilizador</h2>
+      <p>
+        Pode solicitar a qualquer momento a consulta, alteração ou eliminação
+        dos seus dados pessoais, enviando um email para
+        <a :href="`mailto:${PROFILE.email}`" class="underline hover:text-white"
+          >{{ PROFILE.email }}</a
+        >.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-4">5. Segurança dos dados</h2>
+      <p>
+        Implementamos medidas técnicas e organizacionais para proteger os seus
+        dados contra acessos não autorizados, perda ou alteração.
+      </p>
+
+      <h2 class="text-2xl font-semibold mt-4">6. Alterações à política</h2>
+      <p>
+        Esta política pode ser atualizada ocasionalmente. Recomendamos que
+        consulte esta página periodicamente para se manter informado.
+      </p>
+
+      <p class="mt-4">Última atualização: 27 de Outubro de 2025</p>
+    </div>
+  </div>
+</template>

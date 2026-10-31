@@ -1,7 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   darkMode: 'class',
-  content: [],
+  content: [
+    './app/**/*.{vue,js,ts}',
+  ],
   theme: {
     extend: {
       container: {
@@ -19,15 +21,6 @@ export default {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif']
       },
-      animation: {
-        'infinite-scroll': 'infinite-scroll 60s linear infinite',
-      },
-      keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-50%)' },
-        }
-      }
     },
   },
   plugins: [],

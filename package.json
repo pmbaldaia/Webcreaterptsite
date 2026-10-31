@@ -2,28 +2,30 @@
   "name": "webcreaterpt",
   "private": true,
   "type": "module",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Webcreaterpt",
+  "engines": {
+    "node": "^22.22.3 || ^24.15.0 || >=26.0.0"
+  },
   "scripts": {
-    "build": "nuxt build",
     "dev": "nuxt dev",
+    "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
+    "typecheck": "nuxt typecheck",
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxt/image": "1.10.0",
-    "@nuxtjs/google-fonts": "3.2.0",
-    "@nuxtjs/sitemap": "^7.4.7",
-    "@nuxtjs/tailwindcss": "^6.13.1",
-    "@studio-freight/lenis": "^1.0.42",
-    "gsap": "^3.13.0",
-    "nuxt": "^3.15.4",
-    "vue": "latest",
-    "vue-iconsax": "^2.0.0",
-    "vue-router": "latest"
+    "nuxt": "^4.6.2",
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "@nuxtjs/sitemap": "^9.0.3",
+    "vue": "^3.5.0",
+    "vue-router": "^4.5.0",
+    "swiper": "^14.4.0"
   },
   "devDependencies": {
-    "@types/locomotive-scroll": "^4.1.4"
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3",
+    "vue-tsc": "^3.1.0"
   }
 }
