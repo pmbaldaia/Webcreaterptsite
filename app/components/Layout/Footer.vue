@@ -75,7 +75,7 @@ const currentYear = new Date().getFullYear();
           <h3 class="text-white font-semibold mb-2">Shopify Partner</h3>
           <div class="bg-white p-2 rounded">
             <img
-              src="/images/shopify-partner_copy.webp"
+              src="/images/shopify-partner.webp"
               alt="Shopify Partner" width="541" height="91" loading="lazy" decoding="async"
               class="h-12 w-auto"
             />

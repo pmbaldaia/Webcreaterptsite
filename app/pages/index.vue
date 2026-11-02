@@ -5,6 +5,8 @@
   <LayoutLine />
   <SectionService />
   <LayoutLine />
+  <SectionPartners />
+  <LayoutLine />
   <SectionWork />
   <LayoutLine />
   <SectionContactUs />

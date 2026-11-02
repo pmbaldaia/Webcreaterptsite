@@ -1,2 +1,21 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+# Normaliza os finais de linha dos ficheiros de texto como LF, em todos os sistemas.
+* text=auto eol=lf
+
+# Scripts Windows que exigem CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Recursos binários: nunca converter finais de linha.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary
+*.avif binary
+*.woff binary
+*.woff2 binary
+*.ttf binary
+*.eot binary
+*.pdf binary
+*.zip binary

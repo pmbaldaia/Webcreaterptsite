@@ -16,8 +16,8 @@ function handleEscape(event: KeyboardEvent) {
   <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#0b0b1b]/95 shadow-lg shadow-black/20 backdrop-blur-md" @keydown="handleEscape">
     <div class="container mx-auto flex min-h-[76px] items-center justify-between gap-3 py-2 sm:min-h-[88px]">
       <NuxtLink to="/#hero" class="flex shrink-0 items-center rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300" aria-label="WebCreaterPT — voltar à página inicial" @click="closeMenu">
-        <img src="/images/logoSemFundo.png" alt="WebCreaterPT" width="500" height="500"
-             class="h-14 w-auto object-contain sm:h-16" fetchpriority="high" decoding="async" />
+        <img src="/images/new-logowhite.png" alt="WebCreaterPT" width="500" height="500"
+              class="h-16 w-auto object-contain sm:h-20 lg:h-24" fetchpriority="high" decoding="async" />
       </NuxtLink>
 
       <nav id="menu-principal" aria-label="Navegação principal"

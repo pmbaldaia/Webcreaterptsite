@@ -7,6 +7,7 @@ export const NAVLINKS = [
   { label: "Sobre", url: "#about" },
   { label: "Portefólio", url: "#work" },
   { label: "Serviços", url: "#service" },
+  { label: "Parceiros", url: "#partners" },
   { label: "Contacto", url: "#contactus" },
 ];
 
@@ -17,7 +18,7 @@ export const PROFILE = {
     return `${this.firstname} ${this.lastname}`;
   },
   role: "WebCreaterPT",
-  avatar: "/images/profile.jpeg",
+  avatar: "/images/profile.png",
   phone: "+351 915 970 882",
   email: "webcreaterpt@gmail.com",
   description:
@@ -179,5 +180,38 @@ export const ABOUT = {
   introduce: [
     "Na WebCreaterPT, criamos soluções digitais funcionais e visualmente cuidadas, sempre com foco em quem as utiliza.",
     "Combinamos design, tecnologia e criatividade para transformar ideias em websites e lojas online preparados para crescer com cada negócio.",
+  ],
+};
+
+export const PARTNERS = {
+  label: "Parceiros",
+  headline: "Parcerias que acrescentam valor",
+  subline:
+    "Trabalhamos com parceiros criativos que complementam cada projeto com design, identidade visual e comunicação gráfica.",
+  items: [
+    {
+      name: "SousaDesignx",
+      role: "Design gráfico e identidade visual",
+      image: "/images/partners/sousadesignx.webp",
+      imageWidth: 1606,
+      imageHeight: 662,
+      instagramHandle: "@sousadesignx",
+      instagramUrl: "https://www.instagram.com/sousadesignx/",
+      phone: "911 554 488",
+      phoneUrl: "tel:+351911554488",
+      email: "sousadesignx@gmail.com",
+      emailUrl: "mailto:sousadesignx@gmail.com",
+      services: [
+        "Identidade visual",
+        "Logótipos",
+        "Cartazes e pósteres",
+        "Conteúdos para redes sociais",
+        "Capas de livro",
+        "Cartões de visita",
+        "Edição de imagem",
+      ],
+      description:
+        "A SousaDesignx é uma marca pessoal portuguesa de design gráfico, focada na criação de identidades visuais, cartazes, pósteres e conteúdos criativos, com uma abordagem minimalista, moderna e profissional.",
+    },
   ],
 };
