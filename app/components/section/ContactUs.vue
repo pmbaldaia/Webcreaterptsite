@@ -28,7 +28,7 @@ function sendMessage() {
 </script>
 
 <template>
-  <section id="contactus" class="container relative py-14 sm:py-20" aria-labelledby="contact-heading">
+  <section id="contactus" class="container relative py-12 sm:py-16" aria-labelledby="contact-heading">
     <div class="mx-auto max-w-3xl text-center">
       <p class="badge">Vamos conversar?</p>
       <h2 id="contact-heading" class="section-title mx-auto">Vamos falar do seu projeto?</h2>

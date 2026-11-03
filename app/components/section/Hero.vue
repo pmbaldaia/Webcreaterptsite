@@ -3,7 +3,7 @@ import { HERO, WHATSAPP_QUOTE_URL } from '~/utils/content'
 </script>
 
 <template>
-  <section id="hero" class="container relative pt-32 pb-14 sm:pt-36 sm:pb-16 lg:pt-40" aria-labelledby="hero-heading">
+  <section id="hero" class="container relative pb-9 pt-28 sm:pb-12 sm:pt-32 lg:pt-36" aria-labelledby="hero-heading">
     <div class="relative z-10 mx-auto max-w-4xl text-center">
       <p class="badge">{{ HERO.badge }}</p>
       <h1 id="hero-heading" class="mx-auto mt-5 max-w-4xl text-3xl font-bold tracking-tight leading-tight text-white sm:text-4xl md:text-5xl lg:text-[3.5rem]">

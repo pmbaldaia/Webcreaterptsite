@@ -4,7 +4,7 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
 </script>
 
 <template>
-  <section id="work" class="container py-14 sm:py-20" aria-labelledby="work-heading">
+  <section id="work" class="container py-12 sm:py-16" aria-labelledby="work-heading">
     <p class="badge">{{ WORK.label }}</p>
     <h2 id="work-heading" class="section-title">{{ WORK.headline }}</h2>
     <p class="paragraph mt-4 max-w-2xl">{{ WORK.subline }}</p>
@@ -13,7 +13,7 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
       <article v-for="item in WORK.works" :key="item.name"
         class="portfolio-card flex h-full min-w-0 flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#111528] transition-colors duration-200 hover:border-white/30">
         <!-- A imagem é apenas demonstrativa. A ligação encontra-se abaixo do texto. -->
-        <div class="flex aspect-[2/1] items-center justify-center overflow-hidden border-b border-white/10 bg-[#080d1b]">
+        <div class="flex aspect-[2/1] items-center justify-center overflow-hidden border-b border-white/10 bg-[#0c1020]">
           <img :src="imageUrl(item.thumbnails, 960)" :srcset="imageSrcSet(item)"
             sizes="(min-width: 1280px) 610px, (min-width: 768px) 46vw, calc(100vw - 32px)"
             :alt="`Captura de ecrã do website ${item.name}`"

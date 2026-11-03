@@ -3,7 +3,7 @@ import { ABOUT, PROFILE } from '~/utils/content'
 </script>
 
 <template>
-  <section id="about" class="container py-14 sm:py-20" aria-labelledby="about-heading">
+  <section id="about" class="container py-12 sm:py-16" aria-labelledby="about-heading">
     <div class="grid items-center gap-8 lg:grid-cols-2 lg:gap-12">
       <div>
         <p class="badge">{{ ABOUT.label }}</p>

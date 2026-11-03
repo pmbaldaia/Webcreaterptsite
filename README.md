@@ -42,6 +42,29 @@ Os ficheiros estáticos são gerados em `.output/public/` para alojamento compat
 - Link Instagram `@sousadesignx` e contactos presentes no cartão.
 - Dados editáveis em `app/utils/content.ts` e apresentação em `app/components/section/Partners.vue`.
 
+## Ajustes visuais e responsivos — novembro de 2026
+
+Esta revisão mantém o logótipo e a navegação exatamente como enviados no ZIP de origem.
+
+- **Hero:** espaçamento superior e inferior afinado, preservando os textos e os botões.
+- **Separadores:** removidas margens duplicadas, responsáveis pelo excesso de espaço entre secções.
+- **Secções:** espaçamento vertical uniformizado em telemóveis, tablets e desktops.
+- **Carrossel inicial:** molduras 2:1 e legendas com altura consistente, sem cortar as imagens (`object-contain`). O número de cartões visíveis ajusta-se aos ecrãs (cerca de 1 no telemóvel, 2 no tablet e 3 no desktop).
+- **Swiper:** continua automático, infinito, com velocidade linear e controlo apenas por ícone. A inicialização do autoplay foi reforçada para diferentes ordens de montagem do Vue; o comportamento de movimento reduzido mantém-se.
+- **Portefólio:** tom de fundo das imagens harmonizado com o carrossel; links dos projetos continuam apenas na secção de trabalhos.
+- **Limpeza:** removidos os diretórios gerados `.nuxt/` e `.data/` do ZIP; serão recriados automaticamente quando necessários.
+
+### Verificações locais antes de publicar
+
+```bash
+npm ci
+npm run typecheck
+npm run generate
+npm run preview
+```
+
+Validar a navegação, o Swiper, o botão pausa/reprodução, a secção Parceiros e o formulário em ecrãs de 375, 768, 1024 e 1440 px. Confirmar também `prefers-reduced-motion: reduce`. A validação estática dos ficheiros foi realizada nesta entrega; o build completo depende de Node.js e das dependências indicadas acima.
+
 ## Estrutura
 
 - `app/components/section/`: secções da homepage.

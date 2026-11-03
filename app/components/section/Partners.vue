@@ -3,7 +3,7 @@ import { PARTNERS } from '~/utils/content'
 </script>
 
 <template>
-  <section id="partners" class="container py-14 sm:py-20" aria-labelledby="partners-heading">
+  <section id="partners" class="container py-12 sm:py-16" aria-labelledby="partners-heading">
     <p class="badge">{{ PARTNERS.label }}</p>
     <h2 id="partners-heading" class="section-title">{{ PARTNERS.headline }}</h2>
     <p class="paragraph mt-4 max-w-2xl">{{ PARTNERS.subline }}</p>

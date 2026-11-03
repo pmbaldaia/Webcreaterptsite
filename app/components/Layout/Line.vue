@@ -1,6 +1,5 @@
-
 <template>
-  <div class="flex items-center justify-center">
-    <div class="my-8 w-4/5 h-[1px] bg-gradient-to-r from-white/0 via-white/10 to-white/0 "></div>
+  <div aria-hidden="true" class="container">
+    <div class="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
   </div>
 </template>

@@ -3,7 +3,7 @@ import { SERVICE } from '~/utils/content'
 </script>
 
 <template>
-  <section id="service" class="container py-14 sm:py-20" aria-labelledby="service-heading">
+  <section id="service" class="container py-12 sm:py-16" aria-labelledby="service-heading">
     <p class="badge">{{ SERVICE.label }}</p>
     <h2 id="service-heading" class="section-title">{{ SERVICE.headline }}</h2>
     <p class="paragraph mt-4 max-w-2xl">{{ SERVICE.subline }}</p>
