@@ -6,6 +6,7 @@
   html { scroll-behavior: smooth; }
   body { @apply bg-dark font-poppins text-white antialiased; overflow-wrap: break-word; }
   img { max-width: 100%; }
+  a, button, input, textarea, summary { -webkit-tap-highlight-color: transparent; }
   ::selection { background: #4b70f5; color: #fff; }
   :focus-visible { outline: 3px solid #9fc0ff; outline-offset: 3px; }
   [id] { scroll-margin-top: 7rem; }

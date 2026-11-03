@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { WORK } from '~/utils/content'
+import { WORK, UPCOMING_WORK } from '~/utils/content'
 import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
 </script>
 
@@ -41,6 +41,49 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
           </a>
         </div>
       </article>
+    </div>
+
+    <!-- Projetos futuros: secção separada, sem ligação e fora do carrossel principal. -->
+    <div class="mt-12 border-t border-white/10 pt-10 sm:mt-16 sm:pt-12" aria-labelledby="upcoming-heading">
+      <p class="badge">{{ UPCOMING_WORK.label }}</p>
+      <h3 id="upcoming-heading" class="mt-4 text-xl font-semibold leading-tight text-white sm:text-2xl">
+        {{ UPCOMING_WORK.headline }}
+      </h3>
+      <p class="paragraph mt-3 max-w-2xl text-sm sm:text-base">{{ UPCOMING_WORK.subline }}</p>
+
+      <div class="mt-6 grid grid-cols-1 gap-5 md:grid-cols-2 lg:gap-7">
+        <article
+          v-for="item in UPCOMING_WORK.works"
+          :key="item.name"
+          class="flex min-w-0 flex-col overflow-hidden rounded-2xl border border-white/15 bg-[#111528]"
+        >
+          <div class="flex aspect-[2/1] items-center justify-center overflow-hidden border-b border-white/10 bg-[#0c1020]">
+            <img
+              :src="imageUrl(item.thumbnails, 960)"
+              :srcset="imageSrcSet(item)"
+              sizes="(min-width: 1280px) 610px, (min-width: 768px) 46vw, calc(100vw - 32px)"
+              :alt="`Pré-visualização da loja online ${item.name}, ainda em desenvolvimento`"
+              :width="item.imageWidth"
+              :height="item.imageHeight"
+              loading="lazy"
+              decoding="async"
+              class="block h-full w-full object-contain"
+            />
+          </div>
+          <div class="flex flex-1 flex-col gap-3 p-5 sm:p-6">
+            <div class="flex flex-wrap items-start justify-between gap-3">
+              <div class="min-w-0">
+                <h4 class="text-lg font-semibold leading-snug text-white sm:text-xl">{{ item.name }}</h4>
+                <p class="mt-1 text-xs font-medium uppercase tracking-wider text-blue-200">{{ item.type }}</p>
+              </div>
+              <span class="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">
+                Em desenvolvimento
+              </span>
+            </div>
+            <p class="paragraph text-sm sm:text-base">{{ item.description }}</p>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </template>

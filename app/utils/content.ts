@@ -18,7 +18,7 @@ export const PROFILE = {
     return `${this.firstname} ${this.lastname}`;
   },
   role: "WebCreaterPT",
-  avatar: "/images/profile.png",
+  avatar: "/images/profile.webp",
   phone: "+351 915 970 882",
   email: "webcreaterpt@gmail.com",
   description:
@@ -175,6 +175,33 @@ export const WORK = {
   ],
 };
 
+/** Projetos ainda em desenvolvimento: não aparecem no carrossel de trabalhos concluídos. */
+export const UPCOMING_WORK = {
+  label: 'Em desenvolvimento',
+  headline: 'Próximos projetos',
+  subline: 'Mais duas lojas online em preparação. Partilhamos aqui uma primeira imagem de cada projeto.',
+  works: [
+    {
+      name: 'GYSA Store',
+      imageWidth: 2048,
+      imageHeight: 1207,
+      website: 'https://gysastore.pt/',
+      description: 'Loja online de moda, com áreas dedicadas a novidades, mulher, homem e acessórios.',
+      thumbnails: 'gysastore.webp',
+      type: 'Loja online',
+    },
+    {
+      name: 'CallPhone',
+      imageWidth: 2048,
+      imageHeight: 1130,
+      website: 'https://callphone.pt/',
+      description: 'Loja online de telemóveis, com informação sobre produtos, retomas e reparações.',
+      thumbnails: 'callphone.webp',
+      type: 'Loja Shopify',
+    },
+  ],
+}
+
 export const ABOUT = {
   label: "Sobre a WebCreaterPT",
   introduce: [
@@ -212,6 +239,48 @@ export const PARTNERS = {
       ],
       description:
         "A SousaDesignx é uma marca pessoal portuguesa de design gráfico, focada na criação de identidades visuais, cartazes, pósteres e conteúdos criativos, com uma abordagem minimalista, moderna e profissional.",
+    },
+  ],
+};
+
+
+// Dúvidas frequentes: respostas claras, sem preços fixos nem promessas de prazos
+// que dependam do âmbito de cada projeto.
+export const FAQ = {
+  label: 'Perguntas frequentes',
+  headline: 'Tudo o que precisa de saber',
+  subline:
+    'Algumas respostas sobre a criação de websites e lojas online, antes de avançarmos com o seu projeto.',
+  items: [
+    {
+      question: 'Quanto custa criar um website ou uma loja online?',
+      answer:
+        'O valor depende do tipo de projeto, do número de páginas, das funcionalidades e das integrações necessárias. Depois de conhecermos os seus objetivos, apresentamos uma proposta ajustada ao trabalho a realizar.',
+    },
+    {
+      question: 'Existem custos adicionais com plataformas ou domínios?',
+      answer:
+        'O domínio, o alojamento, os planos Shopify e eventuais aplicações de terceiros podem ter custos próprios. Sempre que sejam necessários, estes valores são identificados na proposta para que saiba o que está incluído.',
+    },
+    {
+      question: 'Como funciona o pagamento?',
+      answer:
+        'Habitualmente, o pagamento é dividido em duas fases: 50% no início do projeto e 50% na entrega final. As condições acordadas ficam indicadas na proposta.',
+    },
+    {
+      question: 'Quanto tempo demora a desenvolver o projeto?',
+      answer:
+        'O prazo varia consoante a dimensão e a complexidade do trabalho, bem como a disponibilidade dos conteúdos e das validações necessárias. Definimos as etapas e o calendário antes de começar.',
+    },
+    {
+      question: 'Existe apoio depois de o website ser lançado?',
+      answer:
+        'Incluímos três meses de apoio inicial para esclarecimentos e pequenos ajustes após a entrega. Funcionalidades novas ou alterações fora do âmbito acordado são avaliadas separadamente.',
+    },
+    {
+      question: 'Também melhoram websites ou lojas já existentes?',
+      answer:
+        'Sim. Podemos analisar um projeto existente e propor melhorias de design, desempenho, experiência de utilização, integrações ou funcionalidades, de acordo com as suas necessidades.',
     },
   ],
 };

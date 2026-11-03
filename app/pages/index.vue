@@ -9,6 +9,8 @@
   <LayoutLine />
   <SectionWork />
   <LayoutLine />
+  <SectionFaq />
+  <LayoutLine />
   <SectionContactUs />
   <ScrollToTop />
 </template>

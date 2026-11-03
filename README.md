@@ -99,3 +99,50 @@ git status
 ```
 
 Isto atualiza os finais de linha no índice do repositório sem alterar o conteúdo funcional do site. Não é necessário mudar `core.autocrlf` globalmente no Windows. Para verificar um ficheiro: `git ls-files --eol app/app.vue` (deverá indicar `i/lf w/lf`).
+
+
+## FAQ, imagens WebP e acessibilidade (novembro de 2026)
+
+Esta revisão acrescenta a secção **Perguntas frequentes** entre Portefólio e Contacto, mantendo o design, o Navbar, o logótipo e a navegação existentes.
+
+### FAQ
+
+As perguntas e respostas estão em `app/utils/content.ts` (`FAQ`) e são apresentadas por `app/components/section/Faq.vue`. Podem ser alteradas sem mexer no componente. Incluem critérios de orçamento, custos de plataformas, condições de pagamento, prazos, apoio inicial e melhorias em websites existentes. Não publicam um preço fixo. As condições comerciais devem ser confirmadas antes da publicação se entretanto tiverem mudado.
+
+### Imagens
+
+- `logo-white-horizontal.png` → `logo-white-horizontal.webp` (WebP **sem perdas**, mesmas dimensões e píxeis para preservar o aspeto do Navbar).
+- `profile.png` → `profile.webp` (WebP **sem perdas**).
+- Os três logótipos PNG antigos sem referências no código foram retirados de `public/images/`.
+- Capturas do portefólio e parceiro já estavam em WebP, incluindo variantes responsivas com `srcset`; mantidas sem nova compressão para preservar a legibilidade das páginas capturadas.
+- O favicon `.ico` e os ícones `.svg` continuam nos formatos apropriados.
+
+### Acessibilidade
+
+- Perguntas frequentes com `<details>` e `<summary>` nativos: navegação por teclado, estados abertos/fechados anunciados por tecnologias assistivas e ícones decorativos ocultos ao leitor de ecrã.
+- Identificação dos estados `aria-expanded` e das regiões `aria-controls` nos painéis da página de resolução de litígios.
+- Descrição revista para a imagem institucional; descrição de abertura de nova janela na ação WhatsApp do Hero.
+- Mantidos: salto para o conteúdo, identificação de idioma `pt-PT`, foco visível, formulários com etiquetas e validação nativa, imagens com `alt`, Swiper com controlo de pausa e respeito por movimento reduzido.
+
+### Validação local (antes de publicar)
+
+O projeto requer Node.js conforme `package.json` / `.nvmrc`. Executar:
+
+```bash
+npm ci
+npm run typecheck
+npm run generate
+npm run dev
+```
+
+Depois, testar FAQ e formulário com teclado, menu móvel e Swiper com movimento reduzido, e medir com Lighthouse/axe em mobile e desktop. Esta revisão **não comprova conformidade WCAG** sem testes completos de funcionamento e tecnologias assistivas.
+
+## Projetos em desenvolvimento — GYSA Store e CallPhone (novembro de 2026)
+
+- Adicionada uma área discreta **«Próximos projetos»** no final da secção Portefólio, depois dos dez projetos publicados.
+- **GYSA Store** (`gysastore.pt`): loja online de moda, com novidades, mulher, homem e acessórios.
+- **CallPhone** (`callphone.pt`): loja online de telemóveis, com produtos, retomas e reparações.
+- São **pré-visualizações de projetos em desenvolvimento**: não aparecem no Swiper inicial, não incluem datas de lançamento, nem botões «Ver website» antes de serem classificados como concluídos.
+- Os domínios estão guardados em `UPCOMING_WORK` (`app/utils/content.ts`), facilitando a passagem para `WORK.works` após a publicação.
+- Capturas originais fornecidas pelo utilizador, convertidas sem cortes para WebP de qualidade 89, com variantes 480/960/1440 e originais de 2048 píxeis; `srcset` e `loading="lazy"` para reduzir o carregamento.
+- Os dez projetos concluídos, a FAQ, a parceria SousaDesignx, o Navbar, o WhatsApp e as páginas legais foram preservados.

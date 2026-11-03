@@ -12,6 +12,7 @@ import { HERO, WHATSAPP_QUOTE_URL } from '~/utils/content'
       <p class="paragraph mx-auto mt-5 max-w-2xl text-base sm:text-lg">{{ HERO.subline }}</p>
       <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
         <a :href="WHATSAPP_QUOTE_URL" target="_blank" rel="noopener noreferrer"
+          aria-label="Falar sobre um projeto através do WhatsApp (abre numa nova janela)"
           class="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-[#3a60e8] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300 sm:w-auto">
           Falar sobre um projeto
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14m-7-7 7 7-7 7" /></svg>

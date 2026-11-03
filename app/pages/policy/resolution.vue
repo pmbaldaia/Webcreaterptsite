@@ -75,7 +75,7 @@ const toggle = (index: number) => {
       <a
         href="https://www.consumidor.gov.pt"
         target="_blank"
-        class="text-blue-500 underline"
+        rel="noopener noreferrer" class="text-blue-300 underline"
         >www.consumidor.gov.pt</a
       >.
     </p>
@@ -87,11 +87,15 @@ const toggle = (index: number) => {
         class="bg-[#0b061a]/40 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden transition-all duration-300"
       >
         <button
+          type="button"
+          :aria-expanded="openIndexes.includes(index)"
+          :aria-controls="`entidade-conteudo-${index}`"
           @click="toggle(index)"
           class="w-full text-left px-6 py-6 flex justify-between items-center text-white font-semibold focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <span>{{ entity.name }}</span>
           <svg
+            aria-hidden="true"
             class="w-5 h-5 transition-transform duration-300"
             :class="{ 'rotate-180': openIndexes.includes(index) }"
             fill="none"
@@ -108,6 +112,7 @@ const toggle = (index: number) => {
           </svg>
         </button>
         <div
+          :id="`entidade-conteudo-${index}`"
           v-show="openIndexes.includes(index)"
           class="px-6 pb-6 pt-6 text-white/70 transition-all duration-300"
         >
@@ -118,7 +123,7 @@ const toggle = (index: number) => {
             <span class="font-medium">Email:</span>
             <a
               :href="'mailto:' + entity.email"
-              class="text-blue-500 hover:underline"
+              class="text-blue-300 hover:underline"
               >{{ entity.email }}</a
             >
           </p>
@@ -127,7 +132,8 @@ const toggle = (index: number) => {
             <a
               :href="'https://' + entity.site"
               target="_blank"
-              class="text-blue-500 hover:underline"
+              rel="noopener noreferrer"
+              class="text-blue-300 hover:underline"
               >{{ entity.site }}</a
             >
           </p>

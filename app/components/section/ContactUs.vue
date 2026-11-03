@@ -35,7 +35,7 @@ function sendMessage() {
       <p class="paragraph mt-4">Conte-nos o que tem em mente. Entraremos em contacto através do canal que escolher.</p>
     </div>
 
-    <form @submit.prevent="sendMessage" class="mx-auto mt-8 flex max-w-3xl flex-col gap-5 rounded-2xl border border-white/15 bg-[#111528] p-4 shadow-lg sm:p-8">
+    <form aria-describedby="contact-sending-info" @submit.prevent="sendMessage" class="mx-auto mt-8 flex max-w-3xl flex-col gap-5 rounded-2xl border border-white/15 bg-[#111528] p-4 shadow-lg sm:p-8">
       <div class="grid gap-5 sm:grid-cols-2">
         <div class="flex flex-col gap-2">
           <label for="contact-name" class="text-sm font-medium text-white">Nome <span aria-hidden="true">*</span></label>
@@ -62,7 +62,7 @@ function sendMessage() {
         <input id="contact-terms" v-model="acceptedTerms" name="terms" type="checkbox" required class="mt-1 h-5 w-5 shrink-0 accent-blue-500" />
         <label for="contact-terms" class="text-sm leading-relaxed text-white/85">Li e aceito a <NuxtLink to="/policy/privacy" class="underline underline-offset-4 hover:text-white">Política de Privacidade</NuxtLink>. <span aria-hidden="true">*</span></label>
       </div>
-      <p class="text-xs leading-relaxed text-white/70">Os dados são preparados no seu dispositivo e abertos no WhatsApp ou na sua aplicação de email. A mensagem só é enviada após a sua confirmação nesse serviço.</p>
+      <p id="contact-sending-info" class="text-xs leading-relaxed text-white/70">Os dados são preparados no seu dispositivo e abertos no WhatsApp ou na sua aplicação de email. A mensagem só é enviada após a sua confirmação nesse serviço.</p>
       <div class="flex flex-col gap-3 sm:flex-row">
         <button type="submit" @click="method = 'whatsapp'" class="inline-flex min-h-12 flex-1 items-center justify-center gap-2 rounded-lg bg-[#167d43] px-5 py-3 font-semibold text-white transition-colors hover:bg-[#116437] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
           <img src="/svg/whatsapp.svg" alt="" width="22" height="22" class="h-5 w-5 brightness-0 invert" />

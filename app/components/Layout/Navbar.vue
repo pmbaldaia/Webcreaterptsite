@@ -30,14 +30,16 @@ function handleEscape(event: KeyboardEvent) {
       class="container mx-auto flex h-[72px] items-center justify-between gap-3 sm:h-[80px]"
     >
       <NuxtLink
-        to="/"
+        to="/#hero"
         class="flex h-full shrink-0 items-center rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-300"
         aria-label="WebCreaterPT — voltar ao início"
         @click="closeMenu"
       >
         <img
-          src="/images/logo-white-horizontal.png"
+          src="/images/logo-white-horizontal.webp"
           alt="WebCreaterPT"
+          width="1080"
+          height="1080"
           class="block h-auto w-[180px] origin-left scale-[0.9] object-contain sm:w-[195px] lg:w-[210px]"
           fetchpriority="high"
           decoding="async"
