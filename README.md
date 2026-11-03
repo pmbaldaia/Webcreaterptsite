@@ -146,3 +146,11 @@ Depois, testar FAQ e formulário com teclado, menu móvel e Swiper com movimento
 - Os domínios estão guardados em `UPCOMING_WORK` (`app/utils/content.ts`), facilitando a passagem para `WORK.works` após a publicação.
 - Capturas originais fornecidas pelo utilizador, convertidas sem cortes para WebP de qualidade 89, com variantes 480/960/1440 e originais de 2048 píxeis; `srcset` e `loading="lazy"` para reduzir o carregamento.
 - Os dez projetos concluídos, a FAQ, a parceria SousaDesignx, o Navbar, o WhatsApp e as páginas legais foram preservados.
+
+## Atualização — AM Shoes (3 de novembro de 2026)
+
+- Adicionado **AM Shoes — Sapatarias Moreira** à secção de projetos em preparação.
+- Estado **Desenvolvimento em pausa** identificado de forma discreta, distinto dos projetos que continuam em desenvolvimento.
+- A imagem da homepage foi fornecida pelo utilizador e convertida sem cortes para `amoreirashoes.webp`, com versões `-480`, `-960` e `-1440` para ecrãs diferentes.
+- URL de referência guardado nos dados: `http://ammoreirashoes.netlify.app/`. Não existe link público no cartão enquanto o projeto não for lançado.
+- Mantidos os dez trabalhos realizados e os dois projetos em desenvolvimento (GYSA Store e CallPhone). O novo projeto não aparece no Swiper inicial.

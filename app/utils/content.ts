@@ -178,11 +178,12 @@ export const WORK = {
 /** Projetos ainda em desenvolvimento: não aparecem no carrossel de trabalhos concluídos. */
 export const UPCOMING_WORK = {
   label: 'Em desenvolvimento',
-  headline: 'Próximos projetos',
-  subline: 'Mais duas lojas online em preparação. Partilhamos aqui uma primeira imagem de cada projeto.',
+  headline: 'Projetos em preparação',
+  subline: 'Conheça alguns projetos em desenvolvimento ou temporariamente em pausa.',
   works: [
     {
       name: 'GYSA Store',
+      status: 'Em desenvolvimento',
       imageWidth: 2048,
       imageHeight: 1207,
       website: 'https://gysastore.pt/',
@@ -192,12 +193,23 @@ export const UPCOMING_WORK = {
     },
     {
       name: 'CallPhone',
+      status: 'Em desenvolvimento',
       imageWidth: 2048,
       imageHeight: 1130,
       website: 'https://callphone.pt/',
       description: 'Loja online de telemóveis, com informação sobre produtos, retomas e reparações.',
       thumbnails: 'callphone.webp',
       type: 'Loja Shopify',
+    },
+    {
+      name: 'AM Shoes — Sapatarias Moreira',
+      status: 'Desenvolvimento em pausa',
+      imageWidth: 2048,
+      imageHeight: 1198,
+      website: 'http://ammoreirashoes.netlify.app/',
+      description: 'Website de apresentação da marca de calçado, com coleções, feiras, galeria e contactos.',
+      thumbnails: 'amoreirashoes.webp',
+      type: 'Website institucional',
     },
   ],
 }

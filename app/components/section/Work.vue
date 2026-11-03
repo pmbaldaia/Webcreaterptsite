@@ -43,7 +43,7 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
       </article>
     </div>
 
-    <!-- Projetos futuros: secção separada, sem ligação e fora do carrossel principal. -->
+    <!-- Projetos em desenvolvimento ou pausa: sem ligação e fora do carrossel principal. -->
     <div class="mt-12 border-t border-white/10 pt-10 sm:mt-16 sm:pt-12" aria-labelledby="upcoming-heading">
       <p class="badge">{{ UPCOMING_WORK.label }}</p>
       <h3 id="upcoming-heading" class="mt-4 text-xl font-semibold leading-tight text-white sm:text-2xl">
@@ -62,7 +62,7 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
               :src="imageUrl(item.thumbnails, 960)"
               :srcset="imageSrcSet(item)"
               sizes="(min-width: 1280px) 610px, (min-width: 768px) 46vw, calc(100vw - 32px)"
-              :alt="`Pré-visualização da loja online ${item.name}, ainda em desenvolvimento`"
+              :alt="`Captura de ecrã do projeto ${item.name} (${item.status.toLowerCase()})`"
               :width="item.imageWidth"
               :height="item.imageHeight"
               loading="lazy"
@@ -77,7 +77,7 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
                 <p class="mt-1 text-xs font-medium uppercase tracking-wider text-blue-200">{{ item.type }}</p>
               </div>
               <span class="rounded-full border border-white/20 bg-white/5 px-3 py-1 text-xs font-medium text-white/80">
-                Em desenvolvimento
+                {{ item.status }}
               </span>
             </div>
             <p class="paragraph text-sm sm:text-base">{{ item.description }}</p>

@@ -25,3 +25,10 @@ Neste ambiente, só está instalado Node v22.16.0 (abaixo do mínimo do projeto)
 - Duas imagens novas com variantes 480, 960, 1440 e original, em WebP sem cortes.
 - Links guardados apenas nos dados para utilização futura; não são mostrados como projetos lançados.
 - Confirmar visualmente a secção em mobile, tablet e desktop e realizar `npm run typecheck` e `npm run generate` antes da publicação.
+
+## Atualização — AM Shoes (3 de novembro de 2026)
+
+- Captura original convertida para quatro ficheiros WebP, preservando proporção, sem cortes e com referência no portefólio.
+- GYSA Store e CallPhone continuam apresentados como `Em desenvolvimento`; AM Shoes aparece como `Desenvolvimento em pausa`.
+- Nenhum dos projetos em preparação está no Swiper inicial e os seus cartões não contêm links clicáveis.
+- Testes estáticos de referências de imagens, dados e integridade do ZIP concluídos; build Nuxt e testes visuais responsivos ainda pendentes.
