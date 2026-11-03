@@ -154,3 +154,13 @@ Depois, testar FAQ e formulário com teclado, menu móvel e Swiper com movimento
 - A imagem da homepage foi fornecida pelo utilizador e convertida sem cortes para `amoreirashoes.webp`, com versões `-480`, `-960` e `-1440` para ecrãs diferentes.
 - URL de referência guardado nos dados: `http://ammoreirashoes.netlify.app/`. Não existe link público no cartão enquanto o projeto não for lançado.
 - Mantidos os dez trabalhos realizados e os dois projetos em desenvolvimento (GYSA Store e CallPhone). O novo projeto não aparece no Swiper inicial.
+
+
+## Formulário de contacto — revisão de alinhamento e acessibilidade (novembro de 2026)
+
+- A secção Contacto tem agora apresentação em duas colunas no desktop (informação e formulário) e empilhada no mobile.
+- Os campos Nome e Email partilham uma grelha com alturas e espaçamentos consistentes; as mensagens de erro aparecem imediatamente abaixo do respetivo campo, sem avisos flutuantes do navegador.
+- A validação cobre nome, formato de email, mensagem e aceitação da Política de Privacidade. O primeiro campo inválido recebe foco no envio; os erros podem ser corrigidos sem recomeçar o formulário.
+- Os dois botões de envio têm a mesma largura em desktop e ocupam a largura disponível em mobile.
+- Mantiveram-se o WhatsApp, o email, o conteúdo da mensagem, os contactos e a abertura da aplicação escolhida. Não existe backend de envio: a mensagem só é enviada depois da confirmação no serviço externo.
+- Testar com todos os campos vazios, email inválido, checkbox não assinalada, teclado e resoluções de 375, 768 e 1440 px.

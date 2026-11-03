@@ -32,3 +32,13 @@ Neste ambiente, só está instalado Node v22.16.0 (abaixo do mínimo do projeto)
 - GYSA Store e CallPhone continuam apresentados como `Em desenvolvimento`; AM Shoes aparece como `Desenvolvimento em pausa`.
 - Nenhum dos projetos em preparação está no Swiper inicial e os seus cartões não contêm links clicáveis.
 - Testes estáticos de referências de imagens, dados e integridade do ZIP concluídos; build Nuxt e testes visuais responsivos ainda pendentes.
+
+
+## Revisão do contacto (03/11/2026)
+
+- [x] Verificação estática: nova grelha e sem larguras fixas no formulário.
+- [x] Verificação estática: erros de nome, email, mensagem e consentimento associados aos campos por `aria-describedby` e `aria-invalid`.
+- [x] Verificação estática: foco programado para o primeiro campo inválido.
+- [x] Verificação estática: botões alinhados e métodos WhatsApp/email preservados.
+- [ ] `npm ci && npm run typecheck && npm run generate` num ambiente com Node compatível.
+- [ ] Teste visual e navegação por teclado em mobile, tablet e desktop.
