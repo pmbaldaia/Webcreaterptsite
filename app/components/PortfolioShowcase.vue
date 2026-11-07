@@ -95,7 +95,7 @@ function togglePlayback() {
                 :width="item.imageWidth" :height="item.imageHeight"
                 :alt="`Pré-visualização do website ${item.name}`"
                 loading="lazy" decoding="async" draggable="false"
-                class="block h-full w-full object-contain object-center" />
+                class="block h-full w-full object-cover object-top" />
             </div>
             <figcaption class="flex min-h-[52px] items-center px-4 py-3 text-sm font-medium leading-snug text-white/90">{{ item.name }}</figcaption>
           </figure>
@@ -108,7 +108,7 @@ function togglePlayback() {
             :class="index === 0 ? 'flex' : index === 1 ? 'hidden sm:flex' : 'hidden lg:flex'">
             <div class="flex aspect-[2/1] items-center justify-center overflow-hidden border-b border-white/10 bg-[#0c1020]">
               <img :src="imageUrl(item.thumbnails, 480)" :width="item.imageWidth" :height="item.imageHeight"
-                :alt="`Pré-visualização do website ${item.name}`" class="block h-full w-full object-contain object-center" decoding="async" />
+                :alt="`Pré-visualização do website ${item.name}`" class="block h-full w-full object-cover object-top" decoding="async" />
             </div>
             <figcaption class="flex min-h-[52px] items-center px-4 py-3 text-sm font-medium leading-snug text-white/90">{{ item.name }}</figcaption>
           </figure>

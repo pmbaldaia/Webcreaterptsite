@@ -18,7 +18,7 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
             sizes="(min-width: 1280px) 610px, (min-width: 768px) 46vw, calc(100vw - 32px)"
             :alt="`Captura de ecrã do website ${item.name}`"
             :width="item.imageWidth" :height="item.imageHeight"
-            loading="lazy" decoding="async" class="block h-full w-full object-contain" />
+            loading="lazy" decoding="async" class="block h-full w-full object-cover object-top" />
         </div>
 
         <div class="flex flex-1 flex-col gap-3 p-5 sm:p-6">
@@ -67,7 +67,7 @@ import { imageUrl, imageSrcSet } from '~/utils/portfolioImages'
               :height="item.imageHeight"
               loading="lazy"
               decoding="async"
-              class="block h-full w-full object-contain"
+              class="block h-full w-full object-cover object-top"
             />
           </div>
           <div class="flex flex-1 flex-col gap-3 p-5 sm:p-6">
